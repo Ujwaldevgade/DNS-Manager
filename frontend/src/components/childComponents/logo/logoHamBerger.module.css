@@ -10,7 +10,7 @@
 
 .logoContainer a {
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;

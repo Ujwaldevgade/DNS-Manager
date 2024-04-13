@@ -78,16 +78,13 @@ useEffect(() => {
   return (
     <div className={styles.container}>
       {/* Conditionally render the message */}
-      {data.length === 0 && (
-        <h1 style={{ textAlign: 'center', padding: "2rem", height: '10vh', backgroundColor: '#fced69', position: 'absolute', width: '100%', zIndex: '100000000000' }}>Temporarily, I turned off this application due to AWS charges.</h1>
-      )}
+      {/*{data.length === 0 && (
+        <h1 style={{ textAlign: 'center', padding: "2rem", height: '10vh', backgroundColor: '#fced69', position: 'absolute', width: '100%', zIndex: '100000000000' }}>Welcome to the Dashboard Page</h1>
+      )}*/}
       <div className={styles.navbar}>
         <div className={styles.logo}>
           <SideNavbar hamburgerToggle={hamburgerToggle} Close={Close} />
           <LogoHamBerger hamburgerToggle={hamburgerToggle} />
-        </div>
-        <div>
-          <FaUserCircle size={30} color="blue" />
         </div>
       </div>
 
