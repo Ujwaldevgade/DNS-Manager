@@ -30,7 +30,7 @@ DNS Manager is a full-stack application for managing DNS records and domains. It
 5. Start the development servers:
    - Frontend: `cd frontend && npm start`
    - Backend: `cd backend && npm start`
-6. Access the application at `http://localhost:3000` in your browser.
+6. Access the application at `http://localhost:5173/` in your browser.
 
 ## Folder Structure
 
