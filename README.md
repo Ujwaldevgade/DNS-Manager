@@ -1,135 +1,52 @@
+# DNS Manager
 
+DNS Manager is a full-stack application for managing DNS records and domains. It provides a user-friendly interface to create, update, and delete DNS records and domains.
 
-# Frontend
+## Features
 
-![welcome image](./readmeImages/welcome.png)
-![home](./readmeImages/home.png)
-### React 
+- User authentication and authorization
+- Dashboard to view all domains and DNS records
+- Create new DNS records and domains
+- Edit and delete existing DNS records and domains
+- Visual representation of DNS data with charts
+- Search and filter functionality
+- Responsive design for mobile and desktop devices
 
+## Technologies Used
 
+- Frontend: React, React Router, Axios, Chart.js, React Icons, React Hot Toast
+- Backend: Node.js, Express, MongoDB, Mongoose, JSON Web Tokens (JWT)
+- Other: Vite (Frontend development server), Git (Version control), Vercel (Hosting), AWS Route 53 (DNS management)
 
-# Backend API
+## Setup Instructions
 
+1. Clone the repository: `git clone https://github.com/Ujwaldevgade/DNS-Manager.git`
+2. Navigate to the project directory: `cd DNS-Manager`
+3. Install dependencies:
+   - Frontend: `cd frontend && npm install`
+   - Backend: `cd backend && npm install`
+4. Configure environment variables:
+   - Backend: Create a `.env` file in the `backend` directory and add necessary environment variables (e.g., MongoDB URI, JWT secret, AWS credentials)
+5. Start the development servers:
+   - Frontend: `cd frontend && npm start`
+   - Backend: `cd backend && npm start`
+6. Access the application at `http://localhost:3000` in your browser.
 
-## Domain
+## Folder Structure
 
+- `frontend`: Contains the React frontend code
+- `backend`: Contains the Node.js backend code
+- `docs`: Documentation files, including this README.md
+- `screenshots`: Screenshots of the application
 
-GET
-Hello world
+## Contributing
 
-```
-https://dns-manager-1-b1ij.onrender.com/
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/my-feature`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature/my-feature`)
+5. Create a new Pull Request
 
-```
----
-GET
-all
-```
-https://dns-manager-1-b1ij.onrender.com/api/v1/dns-records/all?HostedZoneId=Z08675451R065VIY3K2XK
-```
-Query Params
-```
-HostedZoneId = Z08675451R065VIY3K2XK
-```
----
+## License
 
-POST
-create
-```https://dns-manager-1-b1ij.onrender.com/api/v1/domain/create```
-
-Body
-```
- [  
-      {
-        
-        "Name": "forfronendtest.netlify.app"
-      
-    }
- ]
- ```
- 
- 
- 
- POST
-Delete
-
-```https://dns-manager-1-b1ij.onrender.com/api/v1/domain/delete```
-
-Body
-
-```
-  [ 
-    {
-        "Name":"loveyou.com"
-    },
-    {
-        "Name": "domain30.com"
-    },
-    {
-        "Name": "domain31.com"
-    }
-  ]
-```
-
-## DNS records
-GET all
-
-```
-https://dns-manager-1-b1ij.onrender.com/api/v1/dns-records/all?HostedZoneId=Z08675451R065VIY3K2XK
-```
-
-Query Params
-```
-HostedZoneId = Z08675451R065VIY3K2XK
-```
-
-
-
-POST
-create
-```
-https://dns-manager-1-b1ij.onrender.com/api/v1/dns-records/create-multi
-
- {
-    "Name": "ipv7.loveyou.com.",
-    "Type": "AAAA",
-    "TTL": 3600,
-    "ResourceRecords": [
-        {
-            "Value": "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
-        }
-    ]
- }
-
-```
-
-POST
-Delete Record
-```
-https://dns-manager-1-b1ij.onrender.com/api/v1/dns-records/update
-```
-
-```
-
-[  
-    {
-            "Name": "loveyou.com.",
-            "Type": "A",
-            "TTL": 800,
-            "ResourceRecords": [
-                {
-                    "Value": "192.0.2.1"
-                },
-                {
-                    "Value": "192.0.2.3"
-                },
-                {
-                    "Value": "192.0.2.4"
-                }
-            ]
-    }
-
-]
-  
-```
-
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
